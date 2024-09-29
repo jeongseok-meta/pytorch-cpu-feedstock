@@ -24,7 +24,7 @@ github_actions:
 os_version:
   linux_64: cos7
 provider:
-  linux_64: github_actions
+  linux_64: azure
   linux_aarch64: azure
   linux_ppc64le: azure
 remote_ci_setup:
