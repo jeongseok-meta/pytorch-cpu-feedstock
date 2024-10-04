@@ -28,11 +28,11 @@ source:
     # https://github.com/pytorch/pytorch/pull/82695/files#diff-8e5cb190cc46be808993381a31fe9c027705d356b6bc0460368c0310ae82b273R61-R66
     # https://github.com/pytorch/pytorch/pull/108932
     # cross compiling CUDA also needs to delete the check
-    # - patches/0001-Allow-splayed-layouts.patch  # [cuda_compiler_version == "12.0" or (build_platform != target_platform and cuda_compiler_version != "None")]
+    # - patches/0001-Allow-splayed-layouts.patch  # [build_platform != target_platform]
     # https://github.com/pytorch/pytorch/issues/101135
     # the following patch was transcribed to work wit 2.1.0
     # https://gist.github.com/andreigh/f78f631e0039f0af410b269acbb0c8dc
-    # - patches/0002-Use-new-nvtoolset.patch      # [cuda_compiler_version == "12.0"]
+    # - patches/0002-Use-new-nvtoolset.patch
     - patches/0003-Force-usage-of-python-3-and-error-without-numpy.patch
     # https://github.com/pytorch/pytorch/pull/137084
     - patches/0004-Help-find-numpy.patch
@@ -64,6 +64,8 @@ build:
   # 2024/04 This build seems to fail due to disk space on the CIs
   # We can potentially re-enable it at a later time
   skip: true  # [cuda_compiler_version == "11.8" and aarch64]
+  skip: true  # [osx]
+  skip: true  # [aarch64]
 
 requirements:
   # Keep this list synchronized (except for python*, numpy*) in outputs
