@@ -1,0 +1,13 @@
+diff --git a/requirements.txt b/requirements.txt
+index 0164ee0f7f..e7131a758f 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -13,7 +13,7 @@ setuptools<=72.1.0
+ types-dataclasses
+ typing-extensions>=4.8.0
+ sympy==1.12.1 ; python_version == "3.8"
+-sympy==1.13.1 ; python_version >= "3.9"
++sympy!=1.13.2 ; python_version >= "3.9"
+ filelock
+ networkx
+ jinja2
