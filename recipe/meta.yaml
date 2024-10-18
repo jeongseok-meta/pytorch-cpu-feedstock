@@ -301,6 +301,7 @@ outputs:
       requires:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
+        - boto3  # [osx and x86]
         - hypothesis
         - pytest
         - tabulate
