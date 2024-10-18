@@ -277,7 +277,7 @@ outputs:
         # other requirements
         - python
         - typing_extensions >=4.8.0
-        - sympy >=1.13.1
+        - sympy 1.13.1
         - filelock
         - jinja2
         - networkx
