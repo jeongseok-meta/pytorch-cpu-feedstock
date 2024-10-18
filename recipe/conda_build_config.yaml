@@ -58,7 +58,7 @@ cdt_name:                                           # [linux64]
 cuda_compiler:                                      # [linux64]
   - cuda-nvcc                                       # [linux64]
 cuda_compiler_version:                              # [linux64]
-  - 12.2                                            # [linux64]
+  - 12.6                                            # [linux64]
 
 blas_impl:
   - mkl                         # [x86_64]
