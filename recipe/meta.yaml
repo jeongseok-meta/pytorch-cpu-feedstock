@@ -282,7 +282,7 @@ outputs:
         - typing_extensions >=4.8.0
         # sympy 1.13.2 was reported to result in test failures on Windows and mac
         # https://github.com/pytorch/pytorch/pull/133235
-        - sympy !=1.13.2
+        - sympy >=1.13.1,!=1.13.2
         - filelock
         - jinja2
         - networkx
